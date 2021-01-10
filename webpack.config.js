@@ -10,6 +10,18 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ]
       }
     ]
   },
@@ -27,6 +39,9 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
     hot: true,
-    port: 9000
-  }
+    port: 9000,
+    publicPath: '/',
+    historyApiFallback: true
+  },
+  devtool: 'inline-cheap-module-source-map'
 }

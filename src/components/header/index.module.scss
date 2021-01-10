@@ -1,0 +1,17 @@
+.wrapper {
+  background-color: sienna;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+
+  g {
+    fill: white;
+  }
+}

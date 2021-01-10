@@ -1,0 +1,26 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+
+  a {
+    color: deepskyblue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  i, b {
+    display: block;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
